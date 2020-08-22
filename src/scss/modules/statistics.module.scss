@@ -1,0 +1,22 @@
+.Statistics {
+  display: flex;
+  justify-content: center;
+  color: white;
+  margin-top: 20px;
+  padding: 0 100px;
+  .warning {
+    background: red;
+    padding: 5px;
+    display: none;
+  }
+  @media (max-width: 1024px) {
+    & {
+      padding: 0 50px;
+      @media (max-width: 900px) {
+        .warning {
+          display: block;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,118 @@
+header {
+  width: 100%;
+  background-color: rgb(24, 24, 24);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  ul {
+    margin: 0;
+    padding: 32px;
+    margin-left: 50px;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    li {
+      margin-right: 30px;
+      a {
+        text-decoration: none;
+        color: white;
+        position: relative;
+        padding-bottom: 10px;
+        transition: color 0.5s ease;
+        font-size: 110%;
+        letter-spacing: 0.05cm;
+        &:before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          border-bottom: 2px solid #ff7c05;
+          bottom: 2px;
+          transform: scaleX(0);
+          transition: transform 0.2s ease;
+        }
+        &:hover {
+          &:before {
+            transform: scaleX(1);
+          }
+          span {
+            background-color: #c91e1e;
+            color: white;
+          }
+          color: #ff7c05;
+          text-decoration: none;
+        }
+        span {
+          padding: 3px;
+          background-color: #ff7c05;
+          transition: all 0.5s ease;
+        }
+      }
+    }
+  }
+  form {
+    margin-right: 70px;
+    display: flex;
+    align-items: center;
+    input {
+      padding: 14px;
+      margin-right: 20px;
+      background-color: rgb(40, 40, 40);
+      font-size: 100%;
+      color: white;
+      outline: none;
+      outline-color: #282828;
+      transition: outline-color 0.5s ease-out;
+      border: 1px solid rgb(40, 40, 40);
+      &:focus {
+        outline: solid;
+        outline-width: 2px;
+        outline-color: #ff7c05;
+      }
+    }
+    button {
+      padding: 14px 24px;
+      font-weight: 700;
+      font-size: 100%;
+      color: #ff7c05;
+      background-color: rgb(24, 24, 24);
+      border: 2px solid #ff7c05;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      &:hover {
+        background-color: #ff7c05;
+        color: white;
+      }
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10px 10px 10px;
+    ul {
+      padding: 10px;
+      margin: 0;
+      li{
+        a{
+          font-size: 100%;
+        }
+      }
+    }
+    form {
+      margin: 0;
+      margin-top: 5px;
+      input {
+        padding: 7px;
+      }
+      button {
+        padding: 7px 12px;
+      }
+    }
+  }
+}

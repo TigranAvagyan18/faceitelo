@@ -1,0 +1,54 @@
+.EloProgress {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 0 200px;
+  .progressbar {
+    background-color: rgb(50, 55, 55);
+    height: 5px;
+    width: 100%;
+    .bar {
+      background-color: #ff7c05;
+      height: 5px;
+    }
+  }
+  .levels {
+    display: flex;
+    div {
+      &:first-of-type {
+        width: 37%;
+      }
+      border-right: 1px solid #ff7c05;
+      padding: 10px;
+      width: 7%;
+      text-align: center;
+      span {
+        color: white;
+        font-weight: 300;
+      }
+      &:last-of-type {
+        border: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 1056px) {
+  .EloProgress {
+    padding: 0 25px;
+    @media (max-width: 768px) {
+      span {
+        font-size: 85%;
+        img {
+          width: 24px;
+        }
+      }
+      @media (max-width: 600px) {
+        &{
+          display: none;
+        }
+      }
+    }
+  }
+}
