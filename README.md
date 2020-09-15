@@ -1,4 +1,5 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Website](http://test-znaniya.ga).
+[Example](http://test-znaniya.ga/players/pu_mma).
 
 ## Available Scripts
 
